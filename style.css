@@ -7,9 +7,10 @@
 }
 
 body {
-    font-family:sans-serif;
+    font-family: sans-serif;
     background-color: #333;
 }
+
 /*
 html {
     scroll-behavior: smooth;
@@ -44,7 +45,7 @@ html {
 }
 
 .header {
-    color: white;
+    color: rgb(212, 134, 0);
     font-weight: 100;
     text-align: center;
 }
@@ -65,7 +66,7 @@ p {
 }
 
 .link:hover {
-    color:rgb(212, 134, 0);
+    color: rgb(212, 134, 0);
     transition-duration: 0.3s;
 }
 
