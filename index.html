@@ -4,13 +4,14 @@
 <head>
     <title>ScratchLang Documentation</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 
 <body>
     <div class="top">
         <span style="color: white;">&lt;</span><span style="color: #222;">Scratch</span><span
-            style="color: white;">Lang</span><span style="color: #222;">()</span><span style="color: white;">&gt;</span>
-        Docs
+            style="color: white;">Lang</span><span style="color: #222;">()</span><span
+            style="color: white;">&gt;</span>Docs
     </div>
     <div id="nav">
         <a href="#abt"></a><button class="nav-link">About</button></a>
@@ -33,14 +34,13 @@
                 <li class="ul-child"><a href="#gc" class="link">getchar(a1, a2)</a></li>
                 <li class="ul-child"><a href="#nq" class="link">nq(num)</a></li>
             </ul>
-
         </ul>
         <div id="setup">
             <h2 class="header">Setup</h2>
             <div id="win-linux-setup">
                 <h3 class="header">Windows & Linux Setup</h3>
-                <p>If you are a Windows user, install <a href="https://www.msys2.org/" class="link">MSYS2</a>.<br><br>
-                    Install Dependencies (list below)<br><br>Clone the repo:</p>
+                <p>If you are a Windows user, install <a href="https://www.msys2.org/"
+                        class="link">MSYS2</a>.<br><br>Install Dependencies (list below)<br><br>Clone the repo:</p>
                 <div class="code-block">
                     git clone https://github.com/ScratchLang/ScratchLang.git<br>cd ScratchLang/mainscripts
                 </div>
@@ -55,7 +55,7 @@
                 </div><br>
                 <p>If you want to test out the decompiler, run <span class="inline-c">start.sh -4</span> and select the
                     .sb3 <span class="inline-c">decompiler-all-added-blocks.sb3</span> which is in the resources folder.
-                    You get to see it decompile all the blocks added so far.<br><br>To code, edit the .ss(es) in you
+                    You get to see it decompile all the blocks added so far.<br><br>To code, edit the .ss(es) in your
                     favorite glorified text editor like VSC or Atom.<br><br>To add assets, put them in the <span
                         class="inline-c">assets</span> folder for the chosen sprite (or stage)<br><br>You don't need
                     ScratchLang to program ScratchScript (.ss) files, you can use a text editor. You just need
@@ -87,7 +87,7 @@
                             i = 0<br>
                             b = 0<br>
                             b = getchar("-a")<br>
-                        </div>
+                        </div>  
                         <br><br>Since char 0 of the json is a and getchar is looking for a (parameter is -a), then it
                         sets b
                         to 0.<br><br>
@@ -129,7 +129,8 @@
             None of this would be possible without the amazing people at MIT, who created the Scratch programming
             site.<br><br>
             ScratchLang is developed by the <a href="https://github.com/ScratchLang" class="link">ScratchLang
-                Organization</a> under the <a href="" class="link">MIT</a> license (no link yet)
+                Organization</a> under the <a href="https://github.com/ScratchLang/ScratchLang/blob/main/LICENSE"
+                class="link">MIT</a> license.<br><br>
         </p>
     </div>
 </body>
