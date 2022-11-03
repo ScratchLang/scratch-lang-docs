@@ -99,3 +99,7 @@ li {
     border-radius: 7px;
     font-family: monospace;
 }
+
+img {
+    margin-left: 1.5vw;
+}
