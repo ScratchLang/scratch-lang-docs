@@ -8,20 +8,18 @@
 
 <body>
     <div class="top">
-        <span style="color: white;">&lt;</span><span style="color: #222;">Scratch</span><span
-            style="color: white;">Lang</span><span style="color: #222;">()</span><span style="color: white;">&gt;</span>
-        Docs
+        <span style="color: white;">&lt;</span><span style="color: #222;">Scratch</span><span style="color: white;">Lang</span><span style="color: #222;">()</span><span style="color: white;">&gt;</span> Docs
     </div>
     <div id="nav">
         <a href="#abt"></a><button class="nav-link">About</button></a>
-        <a href="#dcs"></a><button class="nav-link center">Docs</button><a>
+        <a href="#dcs"></a><button class="nav-link center">Docs</button>
+        <a>
             <a href="#crdts"><button class="nav-link">Credits</button></a>
     </div>
     <div id="abt" class="section">
         <h1 class="header">About</h1>
-        <p>ScratchLang is a non-visual programming language written in Python and Shell based on <a
-                href="https://scratch.mit.edu" class="link">Scratch</a>. You can contribute on the <a
-                href="https://github.com/ScratchLang/ScratchLang" class="link">Github Repository</a>. </p>
+        <p>ScratchLang is a non-visual programming language written in Python and Shell based on <a href="https://scratch.mit.edu" class="link">Scratch</a>. You can contribute on the <a href="https://github.com/ScratchLang/ScratchLang" class="link">Github Repository</a>.
+        </p>
     </div>
     <div id="dcs">
         <h1 class="header">Documentation</h1>
@@ -39,27 +37,22 @@
             <h2 class="header">Setup</h2>
             <div id="win-linux-setup">
                 <h3 class="header">Windows & Linux Setup</h3>
-                <p>If you are a Windows user, install <a href="https://www.msys2.org/" class="link">MSYS2</a>.<br><br>
-                    Install Dependencies (list below)<br><br>Clone the repo:</p>
+                <p>If you are a Windows user, install <a href="https://www.msys2.org/" class="link">MSYS2</a>.<br><br> Install Dependencies (list below)<br><br>Clone the repo:</p>
                 <div class="code-block">
                     git clone https://github.com/ScratchLang/ScratchLang.git<br>cd ScratchLang/mainscripts
                 </div>
                 <br>
                 <p>Start the project with</p>
                 <div class="code-block">
-                    chmod 755 start.sh<br>./start.sh
+                    python3 scratchlang.py
                 </div><br>
                 <p>If you have a ScratchLang command, start the project with</p>
                 <div class="code-block">
                     scratchlang
                 </div><br>
-                <p>If you want to test out the decompiler, run <span class="inline-c">start.sh -4</span> and select the
-                    .sb3 <span class="inline-c">decompiler-all-added-blocks.sb3</span> which is in the resources folder.
-                    You get to see it decompile all the blocks added so far.<br><br>To code, edit the .ss(es) in you
-                    favorite glorified text editor like VSC or Atom.<br><br>To add assets, put them in the <span
-                        class="inline-c">assets</span> folder for the chosen sprite (or stage)<br><br>You don't need
-                    ScratchLang to program ScratchScript (.ss) files, you can use a text editor. You just need
-                    ScratchLang to compile your project so it can run in Scratch.</p>
+                <p>If you want to test out the decompiler, run <span class="inline-c">start.sh -4</span> and select the .sb3 <span class="inline-c">decompiler-all-added-blocks.sb3</span> which is in the resources folder. You get to see it decompile all the
+                    blocks added so far.<br><br>To code, edit the .ss(es) in you favorite glorified text editor like VSC or Atom.<br><br>To add assets, put them in the <span class="inline-c">assets</span> folder for the chosen sprite (or stage)<br><br>You
+                    don't need ScratchLang to program ScratchScript (.ss) files, you can use a text editor. You just need ScratchLang to compile your project so it can run in Scratch.</p>
             </div>
         </div>
         <div id="amb">
@@ -72,63 +65,40 @@
                         There are some common functions that the script uses.<br><br>
                     <div id="gc">
                         <h3 class="header">getchar()</h3>
-                        The <span class="inline-c">getchar()</span> function gets char i of the project.json file,
-                        inside the variable char.<br><br>
-                        <img src="images/code.png">
-                        <br><br>Lets say the first 3 characters of the json are "abc". If i is 0 and you run <span
-                            class="inline-c">getchar()</span>, then the value of the variable char will be a. If i
-                        is 1,
-                        then char is b. And so on.<br>
-                        Another important thing that this function does is tell you if the char i of the json is a
-                        certain
-                        one.
-                        Lets say the json is "abc" again.<br><br>
-                        <div class="code-block">
-                            i = 0<br>
-                            b = 0<br>
-                            b = getchar("-a")<br>
-                        </div>
-                        <br><br>Since char 0 of the json is a and getchar is looking for a (parameter is -a), then it
-                        sets b
-                        to 0.<br><br>
-                        <div class="code-block">
-                            i = 1<br>
-                            b = 0<br>
-                            b = getchar("-a")<br>
-                        </div>
-                        <br>Since char 1 of the json is b but getchar is looking for a, then b stays at the value it
-                        was
-                        before
-                        which is 0.
-                        <div id="nq">
-                            <h3 class="header">nq(num)</h3>
-                            The <span class="inline-c">nq(num)</span> function goes to the next double quote character
-                            in the project.json. By default it does this once, but you can set the parameter "num" to a
-                            number to do it multiple times<br><br>
-                            <img src="images/code2.png"><br><br>
-                            The project.json is "abc".<br><br>
-                            <div class="code-block">
-                                i = 0<br>
-                                nq()<br>
-                            </div>
-                            <br>i starts at 0, but when it goes to the next quotation mark in the json, i is set to 4.
-                        </div>
+                        The <span class="inline-c">getchar()</span> function gets char i of the project.json file, inside the variable char.<br><br>
+                <img src="images/code.png">
+                <br><br>Lets say the first 3 characters of the json are "abc". If i is 0 and you run <span class="inline-c">getchar()</span>, then the value of the variable char will be a. If i is 1, then char is b. And so on.<br> Another important thing
+                that this function does is tell you if the char i of the json is a certain one. Lets say the json is "abc" again.<br><br>
+                <div class="code-block">
+                    i = 0<br> b = 0<br> b = getchar("-a")<br>
+                </div>
+                <br><br>Since char 0 of the json is a and getchar is looking for a (parameter is -a), then it sets b to 0.<br><br>
+                <div class="code-block">
+                    i = 1<br> b = 0<br> b = getchar("-a")<br>
+                </div>
+                <br>Since char 1 of the json is b but getchar is looking for a, then b stays at the value it was before which is 0.
+                <div id="nq">
+                    <h3 class="header">nq(num)</h3>
+                    The <span class="inline-c">nq(num)</span> function goes to the next double quote character in the project.json. By default it does this once, but you can set the parameter "num" to a number to do it multiple times<br><br>
+                    <img src="images/code2.png"><br><br> The project.json is "abc".<br><br>
+                    <div class="code-block">
+                        i = 0<br> nq()
+                        <br>
                     </div>
-                    </p>
-                </span>
+                    <br>i starts at 0, but when it goes to the next quotation mark in the json, i is set to 4.
+                </div>
             </div>
+            </p>
+            </span>
         </div>
+    </div>
     </div>
     <div id="crdts" class="section">
         <h1 class="header">Credits</h1>
-        <p>The repository is owned, maintained, and programmed by <a href="https://github.com/0K9090"
-                class="link">0K9090</a> and other <a
-                href="https://github.com/ScratchLang/ScratchLang/graphs/contributors" class="link">contributors</a>.
-            <br><br> This site is developed and maintained by <a href="https://github.com/stan-solov"
-                class="link">Stan-Solov</a> and <a href="https://github.com/0K9090" class="link">0K9090</a>. <br><br>
-            None of this would be possible without the amazing people at MIT, who created the Scratch programming
-            site.<br><br>
-            ScratchLang is developed by the <a href="https://github.com/ScratchLang" class="link">ScratchLang
+        <p>The repository is owned, maintained, and programmed by <a href="https://github.com/0K9090" class="link">0K9090</a> and other <a href="https://github.com/ScratchLang/ScratchLang/graphs/contributors" class="link">contributors</a>.
+            <br><br> This site is developed and maintained by <a href="https://github.com/stan-solov" class="link">Stan-Solov</a> and <a href="https://github.com/0K9090" class="link">0K9090</a>. <br><br> None of this would be possible without the amazing
+            people at MIT, who created the Scratch programming site.
+            <br><br> ScratchLang is developed by the <a href="https://github.com/ScratchLang" class="link">ScratchLang
                 Organization</a> under the <a href="" class="link">MIT</a> license (no link yet)
         </p>
     </div>
