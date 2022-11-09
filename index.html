@@ -28,6 +28,8 @@
                 <li class="ul-child"><a href="#win-linux-setup" class="link">Windows & Linux</a></li>
                 <li class="ul-child"><a href="#mc-chrome" class="link">Mac & Chrome OS</a></li>
                 <a href="#codes" class="link">Code Reference</a><br>
+                <li class="ul-child"><a href="#data" class="link">Data</a></li>
+                <li class="ul-child"><a href="#ctrl" class="link">Control</a></li>
                 <a class="link" href="#amb"> How to Add More Blocks</a>
                 <li class="ul-child"><a href="#gc" class="link">getchar(a1, a2)</a></li>
                 <li class="ul-child"><a href="#nq" class="link">nq(num)</a></li>
@@ -64,7 +66,19 @@
         </div>
         <div id="codes">
             <h2 class="header">Code Reference</h1>
-            
+            <div id="data">    
+            <h3 class="header">Data</h3>
+            <p><span class="inline-c">var=string</span> Declare and define a variable. Example: <span class="inline-c">myVariable="Hello World!"</span><br><br>
+            <span class="inline-c">list=item1,item2,item3,etc</span> Overwrites anything in a list to the items listed. No spaces, and for an empty list, just add a comma after the equal sign. Example: <span class="inline-c">myList="hello","world",scratch,5</span><br><br>
+            </p></div>
+            <div id="ctrl">
+                <h3 class="header">Control Scripts</h3>
+                <p><span class="inline-c">wait("n")seconds</span> Waits n seconds. You can also use variables, for example: <span class="inline-c">wait(myVar)seconds</span><br><br><span class="inline-c">repeat("num"){}</span> Repeats the code inside the curly braces "num" times, using a variable: 
+                <span class="inline-c">repeat(myVar){wait("5")seconds}</span><br><br>
+                <span class="inline-c">forever{}</span> Executes everything inside the braces for ever (or until the red octagon is pressed). Example: <span class="inline-c">forever{move("5")steps}</span><br><br>
+                <span class="inline-c">if &lt;INPUT> then {}</span> Runs code inside the braces if &lt;INPUT> is true. Example (with <span class="inline-c">myVar</span> having the value of <span class="inline-c">true</span>): <span class="inline-c">if&lt;myVar>then {move("15")steps}</span><br><br>
+                <span class="inline-c">if &lt;INPUT> then {} else {}</span> Runs code inside the braces if &lt;INPUT> is true, and runs the code under the <span class="inline-c">else</span> braces if &lt;INPUT> is false. Example (with <span class="inline-c">myVar</span> having the value of <span class="inline-c">true</span>): <span class="inline-c">if&lt;myVar>then {move("15")steps} else {move("-5")steps}</span></p>
+            </div>
         </div>
         <div id="amb">
             <h2 class="header">How to Add More Blocks</h2>
