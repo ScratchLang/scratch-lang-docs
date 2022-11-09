@@ -12,10 +12,9 @@
         <span style="color: white;">&lt;</span><span style="color: #222;">Scratch</span><span style="color: white;">Lang</span><span style="color: #222;">()</span><span style="color: white;">&gt;</span>Docs
     </div>
     <div id="nav">
-        <a href="#abt"></a><button class="nav-link">About</button></a>
-        <a href="#dcs"></a><button class="nav-link center">Docs</button>
-        <a>
-            <a href="#crdts"><button class="nav-link">Credits</button></a>
+        <a href="#abt"><button class="nav-link">About</button></a>
+        <a href="#dcs"><button class="nav-link center">Docs</button></a>
+        <a href="#crdts"><button class="nav-link">Credits</button></a>
     </div>
     <div id="abt" class="section">
         <h1 class="header">About</h1>
@@ -28,6 +27,7 @@
             <ul><a class="link" href="#setup"> Setup</a>
                 <li class="ul-child"><a href="#win-linux-setup" class="link">Windows & Linux</a></li>
                 <li class="ul-child"><a href="#mc-chrome" class="link">Mac & Chrome OS</a></li>
+                <a href="#codes" class="link">Code Reference</a><br>
                 <a class="link" href="#amb"> How to Add More Blocks</a>
                 <li class="ul-child"><a href="#gc" class="link">getchar(a1, a2)</a></li>
                 <li class="ul-child"><a href="#nq" class="link">nq(num)</a></li>
@@ -52,8 +52,19 @@
                 </div><br>
                 <p>If you want to test out the decompiler, run <span class="inline-c">python3 scratchlang.py -4</span> and select the .sb3 <span class="inline-c">every-block-+-pen.sb3</span> which is in the resources folder. You get to see it decompile all
                     the blocks added so far.<br><br>To code, edit the .ss(es) in your favorite glorified text editor like VSC or Atom.<br><br>To add assets, put them in the <span class="inline-c">assets</span> folder for the chosen sprite (or stage)<br><br>You
-                    don't need ScratchLang to program ScratchScript (.ss) files, you can use a text editor. You just need ScratchLang to compile your project so it can run in Scratch.</p>
+                    don't need ScratchLang to program ScratchScript (.ss) files, you can use a text editor. You just need ScratchLang to compile your project so it can run in Scratch.<br><br>To check the stable blocks, just decompile the <span class="inline-c">
+                    every-block-+-pen.sb3</span> which is in the <span class="inline-c">resources</span> folder.
+                    You will get an unknown block error for blocks that the decompiler can't read yet.
+                    Every other block is most likely a stable block</p>
             </div>
+            <div id="mc-chrome">
+                <h3 class="header">Mac & Chrome OS</h3>
+                <p>Unfortunatly, Mac and Chrome OS can't use ScratchLang at this time. We are sorry for this inconvenience. 🙁</p>
+            </div>
+        </div>
+        <div id="codes">
+            <h2 class="header">Code Reference</h1>
+            
         </div>
         <div id="amb">
             <h2 class="header">How to Add More Blocks</h2>
@@ -85,10 +96,9 @@
                         i = 0<br> nq()
                         <br>
                     </div>
-                    <br>i starts at 0, but when it goes to the next quotation mark in the json, i is set to 4.
+                    <br><p>i starts at 0, but when it goes to the next quotation mark in the json, i is set to 4.</p>
                 </div>
             </div>
-        </div>
     </div>
     </p>
     </span>
