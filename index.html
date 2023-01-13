@@ -9,7 +9,9 @@
 
 <body>
     <div class="top">
-        <span style="color: white;">&lt;</span><span style="color: #222;">Scratch</span><span style="color: white;">Lang</span><span style="color: #222;">()</span><span style="color: white;">&gt;</span>Docs
+        <span style="color: white;">&lt;</span><span style="color: #222;">Scratch</span><span
+            style="color: white;">Lang</span><span style="color: #222;">()</span><span
+            style="color: white;">&gt;</span>Docs
     </div>
     <div id="nav">
         <a href="#abt"><button class="nav-link">About</button></a>
@@ -18,7 +20,9 @@
     </div>
     <div id="abt" class="section">
         <h1 class="header">About</h1>
-        <p>ScratchLang is a non-visual programming language written in Python and Shell based on <a href="https://scratch.mit.edu" class="link">Scratch</a>. You can contribute on the <a href="https://github.com/ScratchLang/ScratchLang" class="link">Github Repository</a>.
+        <p>ScratchLang is a non-visual programming language written in Python and Shell based on <a
+                href="https://scratch.mit.edu" class="link">Scratch</a>. You can contribute on the <a
+                href="https://github.com/ScratchLang/ScratchLang" class="link">Github Repository</a>.
         </p>
     </div>
     <div id="dcs">
@@ -39,7 +43,8 @@
             <h2 class="header">Setup</h2>
             <div id="win-linux-setup">
                 <h3 class="header">Windows & Linux Setup</h3>
-                <p>If you are a Windows user, install <a href="https://www.msys2.org/" class="link">MSYS2</a>.<br><br>Install Dependencies (list below)<br><br>Clone the repo:</p>
+                <p>If you are a Windows user, install <a href="https://www.msys2.org/"
+                        class="link">MSYS2</a>.<br><br>Install Dependencies (list below)<br><br>Clone the repo:</p>
                 <div class="code-block">
                     git clone https://github.com/ScratchLang/ScratchLang.git<br>cd ScratchLang/mainscripts
                 </div>
@@ -52,80 +57,203 @@
                 <div class="code-block">
                     scratchlang
                 </div><br>
-                <p>If you want to test out the decompiler, run <span class="inline-c">python3 scratchlang.py -4</span> and select the .sb3 <span class="inline-c">every-block-+-pen.sb3</span> which is in the resources folder. You get to see it decompile all
-                    the blocks added so far.<br><br>To code, edit the .ss(es) in your favorite glorified text editor like VSC or Atom.<br><br>To add assets, put them in the <span class="inline-c">assets</span> folder for the chosen sprite (or stage)<br><br>You
-                    don't need ScratchLang to program ScratchScript (.ss) files, you can use a text editor. You just need ScratchLang to compile your project so it can run in Scratch.<br><br>To check the stable blocks, just decompile the <span class="inline-c">
-                    every-block-+-pen.sb3</span> which is in the <span class="inline-c">resources</span> folder.
+                <p>If you want to test out the decompiler, run <span class="inline-c">python3 scratchlang.py -4</span>
+                    and select the .sb3 <span class="inline-c">every-block-+-pen.sb3</span> which is in the resources
+                    folder. You get to see it decompile all
+                    the blocks added so far.<br><br>To code, edit the .ss(es) in ScratchLang's editor, which you can run
+                    with </p>
+                <div class="code-block">python3 editor.py path/to/project_folder</div><br><br>
+                <p>To add assets, put them in the <span class="inline-c">assets</span> folder
+                    for the chosen sprite (or stage)<br><br>You
+                    don't need ScratchLang to program ScratchScript (.ss) files, you can use a text editor. You just
+                    need ScratchLang to compile your project so it can run in Scratch.<br><br>To check the stable
+                    blocks, just decompile the <span class="inline-c">
+                        every-block-+-pen.sb3</span> which is in the <span class="inline-c">resources</span> folder.
                     You will get an unknown block error for blocks that the decompiler can't read yet.
                     Every other block is most likely a stable block</p>
             </div>
             <div id="mc-chrome">
                 <h3 class="header">Mac & Chrome OS</h3>
-                <p>Unfortunatly, Mac and Chrome OS can't use ScratchLang at this time. We are sorry for this inconvenience. 🙁</p>
+                <p>Mac and Chrome OS can run ScratchLang. Just find a way to install Python onto it. (For Chrome OS,
+                    you're going to have to enable the developer linux terminal.)</p>
             </div>
         </div>
         <div id="codes">
             <h2 class="header">Code Reference</h1>
-            <div id="data">    
-            <h3 class="header">Data</h3>
-            <p><span class="inline-c">var=string</span> Declare and define a variable. Example: <span class="inline-c">myVariable="Hello World!"</span><br><br>
-            <span class="inline-c">list=item1,item2,item3,etc</span> Overwrites anything in a list to the items listed. No spaces, and for an empty list, just add a comma after the equal sign. Example: <span class="inline-c">myList="hello","world",scratch,5</span><br><br>
-            </p></div>
-            <div id="ctrl">
-                <h3 class="header">Control Scripts</h3>
-                <p><span class="inline-c">wait("n")seconds</span> Waits n seconds. You can also use variables, for example: <span class="inline-c">wait(myVar)seconds</span><br><br><span class="inline-c">repeat("num"){}</span> Repeats the code inside the curly braces "num" times, using a variable: 
-                <span class="inline-c">repeat(myVar){wait("5")seconds}</span><br><br>
-                <span class="inline-c">forever{}</span> Executes everything inside the braces for ever (or until the red octagon is pressed). Example: <span class="inline-c">forever{move("5")steps}</span><br><br>
-                <span class="inline-c">if &lt;INPUT> then {}</span> Runs code inside the braces if &lt;INPUT> is true. Example (with <span class="inline-c">myVar</span> having the value of <span class="inline-c">true</span>): <span class="inline-c">if&lt;myVar>then {move("15")steps}</span><br><br>
-                <span class="inline-c">if &lt;INPUT> then {} else {}</span> Runs code inside the braces if &lt;INPUT> is true, and runs the code under the <span class="inline-c">else</span> braces if &lt;INPUT> is false. Example (with <span class="inline-c">myVar</span> having the value of <span class="inline-c">true</span>): <span class="inline-c">if&lt;myVar>then {move("15")steps} else {move("-5")steps}</span></p>
-            </div>
+                <div id="data">
+                    <h3 class="header">Data</h3>
+                    <!--
+                    <div class="code-block"></div>
+                    <p></p><br>
+                    <hr>
+                    -->
+                    <hr>
+                    <div class="code-block">set [var] to ("string")</div><br>
+                    <p>Assign something to a variable.</p><br>
+                    <hr>
+                    <div class="code-block">change [var] by ("num")</div><br>
+                    <p>Add "num" to a variable.</p><br>
+                    <hr>
+                    <div class="code-block">show variable [var]</div><br>
+                    <p>Show a variable.</p><br>
+                    <hr>
+                    <div class="code-block">hide variable [var]</div><br>
+                    <p>Hide a variable.</p><br>
+                    <hr>
+                    <div class="code-block">add ("thing") to [list]</div> <br>
+                    <p>Add an item to a list.</p><br>
+                    <hr>
+                    <div class="code-block">delete ("num") of [list]</div> <br>
+                    <p>Remove item "num" from a list.</p><br>
+                    <hr>
+                    <div class="code-block">delete all of [list]</div> <br>
+                    <p>Delete all items from a list.</p><br>
+                    <hr>
+                    <div class="code-block">insert ("thing") at ("num") of [list]</div> <br>
+                    <p>Insert an item into index "num" of a list.</p><br>
+                    <hr>
+                    <div class="code-block">replace item ("num") of [list] with ("thing")</div> <br>
+                    <p>Replace element "num" of a list with something else.</p><br>
+                    <hr>
+                    <div class="code-block">(item ("num") of [list])</div> <br>
+                    <p>Returns item "num" from a list.</p><br>
+                    <hr>
+                    <div class="code-block">(item # of ("thing") of [list])</div> <br>
+                    <p>Returns the index of an item from a list.</p><br>
+                    <hr>
+                    <div class="code-block">(length of [list])</div> <br>
+                    <p>Returns the amount of elements in a list.</p><br>
+                    <hr>
+                    <div class="code-block">&lt;[list] contains ("thing")?&gt;</div>
+                    <br>
+                    <p>Returns true if a list contains an item, else false.</p><br>
+                    <hr>
+                    <div class="code-block">show list [list]</div> <br>
+                    <p>Show a list on the stage</p><br>
+                    <hr>
+                    <div class="code-block">hide list [list]</div> <br>
+                    <p>Hide a list on the stage</p><br>
+                    <hr>
+                    </p>
+                </div>
+                <div id="ctrl">
+                    <h3 class="header">Control Scripts</h3>
+                    <p>
+                        <div class="code-block">wait ("num") seconds</div>
+                        <p>Waits "num" seconds.</p><br>
+                        <hr>
+                        <div class="code-block">repeat("num"){<br><br>}</div>
+                        <p>Repeats the code inside the curly braces "num" times.</p><br>
+                        <hr>
+                        <div class="code-block">forever{<br><br>}</div>
+                        <p>Executes everything inside the braces forever.</p>
+                        <br>
+                        <hr>
+                        <div class="code-block">if &lt;INPUT> then {<br><br>}</div>
+                        <p>Runs code inside the braces if &lt;INPUT> is
+                            true.</p><br>
+                        <hr>
+                        <div class="code-block">if &lt;INPUT> then {<br><br>} else {<br><br>}</div>
+                        <p>Runs code inside the braces if
+                            <code>&lt;INPUT&gt;</code> is true, and runs the code under the <code>else</code> braces if
+                            <code>&lt;INPUT&gt;</code> is false.</p><br>
+                        <hr>
+                        <div class="code-block">wait until &lt;INPUT&gt;</div>
+                        <p>Waits until <code>&lt;INPUT&gt;</code> is true.</p><br>
+                        <hr>
+                        <div class="code-block">repeat until &lt;INPUT&gt; {<br><br>}</div>
+                        <p>Repeats the loop until <code>&lt;INPUT&gt;</code> is true.</p><br>
+                        <hr>
+                        <div class="code-block">while &lt;INPUT&gt; {<br><br>}</div>
+                        <p>Repeats the loop until <code>&lt;INPUT&gt;</code> is <u><i><b>NOT</b></i></u> true.</p><br>
+                        <hr>
+                        <div class="code-block">for each [var] in ("num") {<br><br>}</div>
+                        <p>Repeats "num" times while also increasing the variable.</p><br>
+                        <hr>
+                        <div class="code-block">stop [all]</div>
+                        <p>Stops something depending on the value in the brackets. "all" can be replaced with "this
+                            script" or "other scripts in sprite".</p><br>
+                        <hr>
+                        <div class="code-block">when I start as a clone</div>
+                        <p>Script runs when sprite is cloned.</p><br>
+                        <hr>
+                        <div class="code-block">create a clone of ("sprite")</div>
+                        <p>Create a clone of "sprite".</p><br>
+                        <hr>
+                        <div class="code-block">delete this clone</div>
+                        <p>Delete the clone.</p><br>
+                        <hr>
+                    </p>
+                </div>
         </div>
         <div id="amb">
             <h2 class="header">How to Add More Blocks</h2>
-            <div id="htamb">
+            <p>This section probably won't be written soon.</p>
+            <!-- <div id="htamb">
                 <span style="color: white;">
                     <p>Adding more blocks to ScratchLang is a simple process.<br><br>
 
                         But first, you must know how the program reads the .json.<br>
                         There are some common functions that the script uses.<br><br>
-                    <div id="gc">
-                        <h3 class="header">getchar()</h3>
-                        The <span class="inline-c">getchar()</span> function gets char i of the project.json file, inside the variable char.<br><br>
-                <img src="images/code.png">
-                <br><br>Lets say the first 3 characters of the json are "abc". If i is 0 and you run <span class="inline-c">getchar()</span>, then the value of the variable char will be a. If i is 1, then char is b. And so on.<br> Another important thing
-                that this function does is tell you if the char i of the json is a certain one. Lets say the json is "abc" again.<br><br>
-                <div class="code-block">
-                    i = 0<br> b = 0<br> b = getchar("-a")<br>
-                </div>
-                <br><br>Since char 0 of the json is a and getchar is looking for a (parameter is -a), then it sets b to 0.<br><br>
-                <div class="code-block">
-                    i = 1<br> b = 0<br> b = getchar("-a")<br>
-                </div>
-                <br>Since char 1 of the json is b but getchar is looking for a, then b stays at the value it was before which is 0.
-                <div id="nq">
-                    <h3 class="header">nq(num)</h3>
-                    The <span class="inline-c">nq(num)</span> function goes to the next double quote character in the project.json. By default it does this once, but you can set the parameter "num" to a number to do it multiple times<br><br>
-                    <img src="images/code2.png"><br><br> The project.json is "abc".<br><br>
-                    <div class="code-block">
-                        i = 0<br> nq()
-                        <br>
-                    </div>
-                    <br><p>i starts at 0, but when it goes to the next quotation mark in the json, i is set to 4.</p>
-                </div>
-            </div>
-    </div>
-    </p>
-    </span>
-    </div>
+                        <div id="gc">
+                            <h3 class="header">getchar()</h3>
+                            The <span class="inline-c">getchar()</span> function gets char i of the project.json file,
+                            inside the variable char.<br><br>
+                            <img src="images/code.png">
+                            <br><br>Lets say the first 3 characters of the json are "abc". If i is 0 and you run <span
+                                class="inline-c">getchar()</span>, then the value of the variable char will be a. If i
+                            is 1,
+                            then char is b. And so on.<br> Another important thing
+                            that this function does is tell you if the char i of the json is a certain one. Lets say the
+                            json is "abc" again.<br><br>
+                            <div class="code-block">
+                                i = 0<br> b = 0<br> b = getchar("-a")<br>
+                            </div>
+                            <br><br>Since char 0 of the json is a and getchar is looking for a (parameter is -a), then
+                            it
+                            sets b to 0.<br><br>
+                            <div class="code-block">
+                                i = 1<br> b = 0<br> b = getchar("-a")<br>
+                            </div>
+                            <br>Since char 1 of the json is b but getchar is looking for a, then b stays at the value it
+                            was
+                            before which is 0.
+                            <div id="nq">
+                                <h3 class="header">nq(num)</h3>
+                                The <span class="inline-c">nq(num)</span> function goes to the next double quote
+                                character
+                                in the project.json. By default it does this once, but you can set the parameter "num"
+                                to a
+                                number to do it multiple times<br><br>
+                                <img src="images/code2.png"><br><br> The project.json is "abc".<br><br>
+                                <div class="code-block">
+                                    i = 0<br> nq()
+                                    <br>
+                                </div>
+                                <br>
+                                <p>i starts at 0, but when it goes to the next quotation mark in the json, i is set to
+                                    4.
+                                </p>
+                            </div>
+                        </div>
+                    </p>
+                </span>
+            </div> -->
+        </div>
     </div>
     </div>
     <div id="crdts" class="section">
         <h1 class="header">Credits</h1>
-        <p>The repository is owned, maintained, and programmed by <a href="https://github.com/0K9090" class="link">0K9090</a> and other <a href="https://github.com/ScratchLang/ScratchLang/graphs/contributors" class="link">contributors</a>.
-            <br><br> This site is developed and maintained by <a href="https://github.com/stan-solov" class="link">Stan-Solov</a> and <a href="https://github.com/0K9090" class="link">0K9090</a>. <br><br> None of this would be possible without the amazing
+        <p>The repository is owned, maintained, and programmed by <a href="https://github.com/0K9090"
+                class="link">0K9090</a> and other <a
+                href="https://github.com/ScratchLang/ScratchLang/graphs/contributors" class="link">contributors</a>.
+            <br><br> This site is developed and maintained by <a href="https://github.com/stan-solov"
+                class="link">Stan-Solov</a> and <a href="https://github.com/0K9090" class="link">0K9090</a>. <br><br>
+            None of this would be possible without the amazing
             people at MIT, who created the Scratch programming site.
             <br><br> ScratchLang is developed by the <a href="https://github.com/ScratchLang" class="link">ScratchLang
-                Organization</a> under the <a href="https://github.com/ScratchLang/ScratchLang/blob/main/LICENSE" class="link">MIT</a> license.<br><br>
+                Organization</a> under the <a href="https://github.com/ScratchLang/ScratchLang/blob/main/LICENSE"
+                class="link">MIT</a> license.<br><br>
         </p>
     </div>
 </body>
